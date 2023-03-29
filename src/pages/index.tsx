@@ -1,33 +1,9 @@
 import { Editor } from '@/components/editor'
 import Head from 'next/head'
-import { StrictMode, useEffect } from 'react';
-import { useRef, useState } from 'react'
-import ReactDOM from 'react-dom/client';
-
-const defaultCode = `
-function App() {
-  return (
-    <div>
-      hello
-    </div>
-  )
-}
-`.trim()
+import { useState } from 'react'
 
 export default function Home() {
-  const [editorValue, setEditorValue] = useState(defaultCode)
-  const rootElement = useRef<HTMLDivElement>(null);
-  useEffect(()=>{
-    if (rootElement.current) {
-      const root = ReactDOM.createRoot(rootElement.current);
-      root.render(<StrictMode>
-        <div>
-          hello
-        </div>
-      </StrictMode>
-      )
-    }
-  }, [rootElement])
+  const [editorValue, setEditorValue] = useState("")
 
   return (
     <>
