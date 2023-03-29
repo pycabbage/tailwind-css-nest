@@ -1,3 +1,5 @@
+.npmrc
+
 next-env.d.ts
 
 .yarn/*

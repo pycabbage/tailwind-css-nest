@@ -1,6 +1,7 @@
 import { Editor } from '@/components/editor'
 import Head from 'next/head'
 import { useState } from 'react'
+import { nest } from "tailwind-nest"
 
 export default function Home() {
   const [editorValue, setEditorValue] = useState("")
@@ -25,6 +26,7 @@ export default function Home() {
         `}>
           <div className={`w-1/2 m-2`}>
             <Editor
+              language="plaintext"
               value={editorValue}
               onChange={v => setEditorValue(v ?? "")}
               className={`border-gray-500 border-2`}
@@ -32,8 +34,8 @@ export default function Home() {
           </div>
           <div className={`w-1/2 m-2`}>
             <Editor
-              value={editorValue}
-              onChange={v => {}}
+              language="plaintext"
+              value={nest`${editorValue}`}
               options={{
                 readOnly: true,
               }}

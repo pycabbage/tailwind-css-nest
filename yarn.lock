@@ -281,6 +281,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pycabbage/tailwind-nest@npm:^0.0.0":
+  version: 0.0.0
+  resolution: "@pycabbage/tailwind-nest@npm:0.0.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40pycabbage%2Ftailwind-nest%2F0.0.0%2F09fe5c3550780fbed797fa94b0d0cca226279b4d"
+  dependencies:
+    "@types/node": ^18.15.11
+    typescript: ^5.0.2
+  checksum: 28f07ef312bdabede678d1d5cd48e050842fcc9c854d70073fff4d9d2b62eaf5c72fee33833e519bad4d619a8acd79b83833b03b29d37d765f00b78a79373743
+  languageName: node
+  linkType: hard
+
 "@rushstack/eslint-patch@npm:^1.1.3":
   version: 1.2.0
   resolution: "@rushstack/eslint-patch@npm:1.2.0"
@@ -302,6 +312,7 @@ __metadata:
   resolution: "@tailwind-nest/docs@workspace:."
   dependencies:
     "@monaco-editor/react": ^4.4.6
+    "@pycabbage/tailwind-nest": ^0.0.0
     "@types/node": 18.15.11
     "@types/react": 18.0.31
     "@types/react-dom": 18.0.11
@@ -318,7 +329,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     sass: ^1.60.0
-    tailwind-nest: "pycabbage/tailwind-nest#master"
+    tailwind-nest: ^0.0.0
     tailwindcss: ^3.3.0
     typescript: 5.0.2
     usehooks-ts: ^2.9.1
@@ -3728,13 +3739,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwind-nest@pycabbage/tailwind-nest#master":
+"tailwind-nest@npm:^0.0.0":
   version: 0.0.0
-  resolution: "tailwind-nest@https://github.com/pycabbage/tailwind-nest.git#commit=8d39dd738cc6a79fa16bea587dfdbf018d60f2a9"
+  resolution: "tailwind-nest@npm:0.0.0"
   dependencies:
     "@types/node": ^18.15.11
     typescript: ^5.0.2
-  checksum: 41e1677b69e4ec74f68999b3cfd52128792a26b06896e00816bb7021ff9a7d531c73199eca2ca9752893dd7f30619112760e825c6bb61fb6e82d40f355b7348c
+  checksum: 9d3f64c510f97d28e92d8af05550f13ded51d63655d0d03f10529886457b85f5de2490ee2601868f15d726e2776d07b356d48bd2e7c1c52a8e52d3cdd1fe191e
   languageName: node
   linkType: hard
 

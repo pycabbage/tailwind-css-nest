@@ -76,7 +76,6 @@ function _Editor({ options, theme, beforeMount, ...props }: EditorProps) {
       // fontSize: 18,
       ...options,
     }}
-    language="typescript"
   {...props} />;
 }
 
