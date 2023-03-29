@@ -120,8 +120,8 @@ class TokenExpander {
   }
 }
 
-function dist(str: TemplateStringsArray, ...values: string[]) {
+export function dist(str: TemplateStringsArray, ...values: string[]) {
   return new TokenExpander().dist(str, ...values)
 }
 
-console.log(dist`apple*:{ banana }`)
+// console.log(dist`apple*:{ banana }`)
