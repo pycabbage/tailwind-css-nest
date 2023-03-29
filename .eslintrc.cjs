@@ -7,12 +7,13 @@ module.exports = {
   },
   extends: [
     "standard-with-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "prettier"
   ],
-  overrides: [
-  ],
+  overrides: [],
   parserOptions: {
-    project: "./tsconfig.json",
+    project: "./tsconfig.eslint.json",
   },
   rules: {
     quotes: ["error", "double"],

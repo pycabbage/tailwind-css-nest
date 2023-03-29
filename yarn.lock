@@ -1250,7 +1250,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.43.0":
+"@typescript-eslint/parser@npm:^5.43.0, @typescript-eslint/parser@npm:^5.57.0":
   version: 5.57.0
   resolution: "@typescript-eslint/parser@npm:5.57.0"
   dependencies:
@@ -5366,15 +5366,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwind-css-nested@workspace:.":
+"tailwind-nest@workspace:.":
   version: 0.0.0-use.local
-  resolution: "tailwind-css-nested@workspace:."
+  resolution: "tailwind-nest@workspace:."
   dependencies:
     "@types/eslint": ^8.21.3
     "@types/jest": ^29.5.0
     "@types/node": ^18.15.11
     "@types/prettier": ^2.7.2
     "@typescript-eslint/eslint-plugin": ^5.57.0
+    "@typescript-eslint/parser": ^5.57.0
     cross-env: ^7.0.3
     esbuild: ^0.17.14
     eslint: ^8.37.0

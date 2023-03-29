@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-css-nested",
+  "name": "tailwind-nest",
   "version": "0.0.0",
   "license": "GNU General Public License v3.0",
   "packageManager": "yarn@3.5.0",
@@ -22,7 +22,7 @@
     "test": "jest",
     "lint": "eslint 'src/**/{*.ts,*.tsx}'",
     "build:esbuild": "node scripts/build.mjs",
-    "typegen": "tsc --excludeFiles src/index.test.ts",
+    "typegen": "tsc -p ./tsconfig.emit.json",
     "clean": "rimraf dist",
     "build": "cross-env NODE_ENV=production npm-run-all clean typegen build:esbuild",
     "build:dev": "cross-env NODE_ENV=development npm-run-all clean typegen build:esbuild"
@@ -36,6 +36,7 @@
     "@types/jest": "^29.5.0",
     "@types/prettier": "^2.7.2",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
     "cross-env": "^7.0.3",
     "esbuild": "^0.17.14",
     "eslint": "^8.37.0",
