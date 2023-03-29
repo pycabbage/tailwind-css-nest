@@ -119,7 +119,7 @@ export class TokenExpander {
     return tokens.map(token => token.token).join(" ")
   }
 
-  dist(str: TemplateStringsArray, ...values: string[]): string {
+  nest(str: TemplateStringsArray, ...values: string[]): string {
     const rawValueArray: string[] = []
     for (const [i, value] of str.entries()) {
       rawValueArray.push(value)
@@ -137,8 +137,8 @@ export class TokenExpander {
   }
 }
 
-export function dist(str: TemplateStringsArray, ...values: string[]): string {
-  return new TokenExpander().dist(str, ...values)
+export function nest(str: TemplateStringsArray, ...values: string[]): string {
+  return new TokenExpander().nest(str, ...values)
 }
 
 // console.log(dist`apple*:{ banana }`)
