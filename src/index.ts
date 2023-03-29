@@ -1,13 +1,14 @@
-function copyObject<T extends Object>(obj: T): T {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function copyObject<T>(obj: T): T {
   return {
     ...obj,
   }
 }
 
-class TokenExpander {
-  constructor() { }
+export class TokenExpander {
+  // constructor() { }
 
-  newHT(key: HiearchyTree["key"]): HiearchyTree {
+  newHT(key: HiearchyTree['key']): HiearchyTree {
     return {
       key,
       tokens: [],
@@ -15,8 +16,8 @@ class TokenExpander {
     }
   }
 
-  getElevation(token: string) {
-    return token.match(/:{$/)
+  getElevation(token: string): -1 | 0 | 1 {
+    return (token.match(/:{$/) != null)
       ? 1
       : token === "}"
         ? -1
@@ -55,7 +56,7 @@ class TokenExpander {
       hierarchy += elevation
       if (hierarchy === 0 && elevation === -1) {
         const childKey = childTokens[0].token.match(/(.+):{$/)?.[1]
-        if (!childKey) throw new Error("invalid token")
+        if (childKey === undefined) throw new Error("invalid token")
         const childNode = this.parseHiearchyTree(childTokens, childKey, childTokens[0].offset)
         root.children.push(childNode)
         childTokens.splice(0, childTokens.length)
@@ -88,21 +89,27 @@ class TokenExpander {
         ...token,
         token: prefix + token.token,
       }
-    }))
+    }));
     if (tree.children.length !== 0) {
       for (const childNode of tree.children) {
-        ex.push(...this.distPrefix(childNode, prefix + (childNode.key ? childNode.key + ":" : "")))
+        ex.push(...this.distPrefix(childNode, prefix + (
+          childNode.key === 0
+            ? ""
+            : childNode.key === ""
+              ? ""
+              : childNode.key + ":"
+        )));
       }
     }
     return ex
   }
 
   concatToken(tokens: Token[]): string {
-    tokens.sort((a, b) => a.offset - b.offset)
+    tokens.sort((a, b) => a.offset - b.offset);
     return tokens.map(token => token.token).join(" ")
   }
 
-  dist(str: TemplateStringsArray, ...values: string[]) {
+  dist(str: TemplateStringsArray, ...values: string[]): string {
     const rawValueArray: string[] = []
     for (const [i, value] of str.entries()) {
       rawValueArray.push(value)
@@ -120,7 +127,7 @@ class TokenExpander {
   }
 }
 
-export function dist(str: TemplateStringsArray, ...values: string[]) {
+export function dist(str: TemplateStringsArray, ...values: string[]): string {
   return new TokenExpander().dist(str, ...values)
 }
 
