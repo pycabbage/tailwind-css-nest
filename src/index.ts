@@ -1,4 +1,14 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+interface Token {
+  token: string;
+  offset: number;
+}
+
+interface HiearchyTree {
+  key: 0 | string,
+  tokens: Token[],
+  children: HiearchyTree[],
+}
+
 function copyObject<T>(obj: T): T {
   return {
     ...obj,
@@ -8,7 +18,7 @@ function copyObject<T>(obj: T): T {
 export class TokenExpander {
   // constructor() { }
 
-  newHT(key: HiearchyTree['key']): HiearchyTree {
+  newHT(key: HiearchyTree["key"]): HiearchyTree {
     return {
       key,
       tokens: [],
