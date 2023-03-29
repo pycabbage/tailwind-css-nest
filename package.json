@@ -3,6 +3,9 @@
   "packageManager": "yarn@3.5.0",
   "private": true,
   "type": "module",
+  "workspaces": [
+    "test/*"
+  ],
   "scripts": {
     "test": "jest",
     "lint": "eslint src"
