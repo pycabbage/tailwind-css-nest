@@ -20,7 +20,7 @@ export default function Home() {
         flex flex-col
         transition-[background-color]
       `}>
-        <h1 className="text-2xl mx-6 my-4 font-extrabold font-sans">Tailwind CSS Nest Syntax Demo (React)</h1>
+        <h1 className="text-2xl mx-6 my-4 font-extrabold font-sans">Tailwind CSS Nest Syntax Demo</h1>
         <div className={`
         flex flex-grow
         `}>
