@@ -329,7 +329,6 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     sass: ^1.60.0
-    tailwind-nest: ^0.0.0
     tailwindcss: ^3.3.0
     typescript: 5.0.2
     usehooks-ts: ^2.9.1
@@ -3736,16 +3735,6 @@ __metadata:
     "@pkgr/utils": ^2.3.1
     tslib: ^2.5.0
   checksum: 8a9560e5d8f3d94dc3cf5f7b9c83490ffa30d320093560a37b88f59483040771fd1750e76b9939abfbb1b5a23fd6dfbae77f6b338abffe7cae7329cd9b9bb86b
-  languageName: node
-  linkType: hard
-
-"tailwind-nest@npm:^0.0.0":
-  version: 0.0.0
-  resolution: "tailwind-nest@npm:0.0.0"
-  dependencies:
-    "@types/node": ^18.15.11
-    typescript: ^5.0.2
-  checksum: 9d3f64c510f97d28e92d8af05550f13ded51d63655d0d03f10529886457b85f5de2490ee2601868f15d726e2776d07b356d48bd2e7c1c52a8e52d3cdd1fe191e
   languageName: node
   linkType: hard
 
