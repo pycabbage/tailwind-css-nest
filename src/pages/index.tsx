@@ -1,7 +1,7 @@
 import { Editor } from '@/components/editor'
 import Head from 'next/head'
 import { useState } from 'react'
-import { nest } from "tailwind-nest"
+import { nest } from "@pycabbage/tailwind-nest"
 
 export default function Home() {
   const [editorValue, setEditorValue] = useState("")
